@@ -725,7 +725,6 @@ function copyCommand(command) {
 
 </script>
 
-</body>
 <section class="project-details" style="padding: 40px; text-align: center;">
     <h2>About This Project</h2>
     <p>
@@ -735,4 +734,32 @@ function copyCommand(command) {
     </p>
     <p><strong>Technologies:</strong> HTML, CSS, JavaScript, Git and GitHub</p>
 </section>
+
+<script>
+function validateProjectName(name) {
+    if (!name || name.trim() === "") {
+        alert("Project name cannot be empty!");
+        return false;
+    }
+
+    alert("Project name is valid!");
+    return true;
+}
+</script>
+
+<div style="text-align:center; padding:30px;">
+    <h2>Project Name Validation</h2>
+    <input
+        type="text"
+        id="projectName"
+        placeholder="Enter project name"
+    >
+    <button onclick="validateProjectName(
+        document.getElementById('projectName').value
+    )">
+        Validate
+    </button>
+</div>
+</body>
+
 </html>
